@@ -16,7 +16,7 @@ export const NavBar = () => {
         <NavLink
           to={"/search"}
           className={({ isActive }) =>
-            `${isActive ? "text-black" : "text-white"}`
+            `${isActive ? "text-white" : "text-black"}`
           }
           end
         >
@@ -26,11 +26,11 @@ export const NavBar = () => {
           <ul>
             <li>
               <Link className="category">
-                <p>Categories</p>
+                <p>Genres</p>
                 <i className="fa-solid fa-caret-up arrow-up"></i>
               </Link>
               <ul>
-               <Genders/>
+                <Genders />
               </ul>
             </li>
           </ul>

@@ -33,7 +33,7 @@
   background-color: #272d2d;
 }
 .dropdown ul li:hover ul {
-  width: 100%;
+  width: 5rem;
   display: flex;
   flex-direction: column;
 }
