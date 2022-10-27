@@ -6,11 +6,13 @@ export const MusicAppRoutes = () => {
   return (
     <>
       <NavBar />
-      <Routes>
-        <Route path="search" element={<SearchPage />} />
-        <Route path="category/:id" element={<Category />} />
-        <Route path="/*" element={<Navigate to="/search" />} />
-      </Routes>
+      <div className="container mx-auto w-11/12">
+        <Routes>
+          <Route path="search" element={<SearchPage />} />
+          <Route path="category/:name" element={<Category />} />
+          <Route path="/*" element={<Navigate to="/search" />} />
+        </Routes>
+      </div>
     </>
   );
 };

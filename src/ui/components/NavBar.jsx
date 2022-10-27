@@ -1,4 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Genders } from "./Genders";
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -29,24 +30,7 @@ export const NavBar = () => {
                 <i className="fa-solid fa-caret-up arrow-up"></i>
               </Link>
               <ul>
-                <NavLink
-                  to={"/category/12"}
-                  className={({ isActive }) =>
-                    `${isActive ? "text-amber-500" : "text-white"}`
-                  }
-                  end
-                >
-                  Search all songs
-                </NavLink>
-                <NavLink
-                  to={"/category/13"}
-                  className={({ isActive }) =>
-                    `${isActive ? "text-amber-500" : "text-white"}`
-                  }
-                  end
-                >
-                  Search all songs
-                </NavLink>
+               <Genders/>
               </ul>
             </li>
           </ul>
@@ -54,7 +38,7 @@ export const NavBar = () => {
       </div>
       <div className="second">
         <button
-          className="bg-black px-2 py-1 rounded-md text-white hover:bg-gray-800"
+          className="bg-gray-800 px-2 py-1 rounded-md text-white hover:bg-gray-900"
           onClick={onLogout}
         >
           Logout

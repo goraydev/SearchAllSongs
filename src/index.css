@@ -29,7 +29,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 0.5rem;
+  padding: 1rem 0;
   background-color: #272d2d;
 }
 .dropdown ul li:hover ul {
