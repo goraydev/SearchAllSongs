@@ -9,6 +9,10 @@
   --orange-light: #fab814;
 }
 
+img {
+  object-fit: cover;
+}
+
 .micro {
   height: 2.5rem;
 }
@@ -56,4 +60,9 @@
 
 .dropdown a:hover .arrow-up {
   transform: rotate(180deg);
+}
+
+.card {
+  height: 24rem;
+  width: 20rem;
 }

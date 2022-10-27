@@ -1,6 +1,15 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import queryString from "query-string";
 import useForm from "../../hooks/useForm";
+import { SongList } from "../components";
+import useFetch from "../../hooks/useFetch";
 
 export const SearchPage = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const { q = "" } = queryString.parse(location.search);
+
   const {
     formState: { search },
     onInputChange,
@@ -8,16 +17,21 @@ export const SearchPage = () => {
     search: "",
   });
 
+  const header = "3a28efbae9msh33beba2add552bbp19053djsn4de28e3b0af3";
+  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${q}`;
+
+  const songs = useFetch(url, header).data;
+  if (songs === null) return;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!search.length) return;
 
-    console.log(search)
-
+    navigate(`?q=${search}`);
   };
 
   return (
-    <main className="flex flex-col justify-center h-60">
+    <main className="mt-5 h-60">
       <h1 className="text-center text-2xl">Search All Songs</h1>
       <form
         action=""
@@ -37,6 +51,8 @@ export const SearchPage = () => {
           <img src="./micro-off.png" alt="micro" className="micro" />
         </button>
       </form>
+      <hr />
+      <SongList list={songs.data} />
     </main>
   );
 };
