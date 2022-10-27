@@ -9,6 +9,10 @@
   --orange-light: #fab814;
 }
 
+.micro {
+  height: 2.5rem;
+}
+
 .dropdown ul {
   display: flex;
   flex-direction: column;
