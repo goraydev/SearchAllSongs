@@ -1,4 +1,11 @@
-export const SongCard = ({ id, title, duration, rank, artist, album }) => {
+export const SongCard = ({
+  id,
+  title_short,
+  duration,
+  rank,
+  artist,
+  album,
+}) => {
   return (
     <>
       {/*<!-- Component: Blog card with action button --> */}
@@ -6,8 +13,8 @@ export const SongCard = ({ id, title, duration, rank, artist, album }) => {
         {/*  <!-- Image --> */}
         <figure>
           <img
-            src="https://picsum.photos/id/1081/800/600"
-            alt="card image"
+            src={album.cover_big}
+            alt={album.title}
             className="aspect-video w-full"
           />
         </figure>
@@ -19,7 +26,7 @@ export const SongCard = ({ id, title, duration, rank, artist, album }) => {
               className="relative inline-flex items-center justify-center w-12 h-12 text-white rounded-full"
             >
               <img
-                src="https://i.pravatar.cc/48?img=25"
+                src={artist.picture_small}
                 alt="user name"
                 title="user name"
                 width="48"
@@ -29,13 +36,13 @@ export const SongCard = ({ id, title, duration, rank, artist, album }) => {
             </a>
             <div>
               <h3 className="text-xl font-medium text-slate-700">
-                In the urban Jungle
+                {title_short.slice(0, 20)}
               </h3>
-              <p className="text-sm text-slate-400"> By Mary Jay, jun 3 2023</p>
+              <p className="text-sm text-slate-400"> By {artist.name}</p>
             </div>
           </header>
-          <p>Duration</p>
-          <p>Rank</p>
+          <p>Duration: {duration}</p>
+          <p>Rank: {rank} </p>
         </div>
         {/*  <!-- Action base sized link button --> */}
         <div className="flex justify-end gap-2 p-2 pt-0">
