@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export const SongCard = ({
   id,
   title_short,
@@ -6,6 +8,11 @@ export const SongCard = ({
   artist,
   album,
 }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/song/${id}`);
+  };
+
   return (
     <>
       {/*<!-- Component: Blog card with action button --> */}
@@ -46,7 +53,10 @@ export const SongCard = ({
         </div>
         {/*  <!-- Action base sized link button --> */}
         <div className="flex justify-end gap-2 p-2 pt-0">
-          <button className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide transition duration-300 rounded justify-self-center whitespace-nowrap text-gray-500 hover:bg-amber-500 hover:text-white focus:bg-amber-200 focus:text-amber-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-amber-300 disabled:shadow-none disabled:hover:bg-transparent">
+          <button
+            className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide transition duration-300 rounded justify-self-center whitespace-nowrap text-gray-500 hover:bg-amber-500 hover:text-white focus:bg-amber-200 focus:text-amber-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-amber-300 disabled:shadow-none disabled:hover:bg-transparent"
+            onClick={handleClick}
+          >
             <span>Read more</span>
           </button>
         </div>

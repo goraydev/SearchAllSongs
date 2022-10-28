@@ -3,6 +3,7 @@ import queryString from "query-string";
 import useForm from "../../hooks/useForm";
 import { SongList } from "../components";
 import useFetch from "../../hooks/useFetch";
+import { useSong } from "../../hooks/useSong";
 
 export const SearchPage = () => {
   const navigate = useNavigate();
@@ -17,11 +18,7 @@ export const SearchPage = () => {
     search: "",
   });
 
-  const header = "3a28efbae9msh33beba2add552bbp19053djsn4de28e3b0af3";
-  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${q}`;
-
-  const songs = useFetch(url, header).data;
-  if (songs === null) return;
+  const getSongs = useSong(q);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,7 +49,7 @@ export const SearchPage = () => {
         </button>
       </form>
       <hr />
-      <SongList list={songs.data} />
+      {getSongs?.songs && <SongList list={getSongs.songs} />}
     </main>
   );
 };
