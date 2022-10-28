@@ -66,3 +66,8 @@ img {
   height: 24rem;
   width: 20rem;
 }
+
+.footer {
+  background-color: rgba(245, 161, 23, 0.4);
+  backdrop-filter: blur(1rem);
+}

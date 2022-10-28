@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { NavBar } from "../../ui";
+import { Footer, NavBar } from "../../ui";
 import { Category, SearchPage } from "../pages";
 
 export const MusicAppRoutes = () => {
@@ -13,6 +13,7 @@ export const MusicAppRoutes = () => {
           <Route path="/*" element={<Navigate to="/search" />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 };
