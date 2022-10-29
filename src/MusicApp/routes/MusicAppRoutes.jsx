@@ -1,7 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Footer, NavBar } from "../../ui";
-import { Song } from "../components";
-import { Category, SearchPage } from "../pages";
+import { Category, SearchPage, Song } from "../pages";
 
 export const MusicAppRoutes = () => {
   return (

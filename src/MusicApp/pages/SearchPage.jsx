@@ -2,7 +2,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 import useForm from "../../hooks/useForm";
 import { SongList } from "../components";
-import useFetch from "../../hooks/useFetch";
 import { useSong } from "../../hooks/useSong";
 
 export const SearchPage = () => {
