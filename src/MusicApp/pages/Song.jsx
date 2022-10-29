@@ -54,7 +54,7 @@ export const Song = () => {
           <div className="card-info flex flex-col gap-2">
             <p>Song: {title}</p>
             <p>Track position: {track_position}</p>
-            <audio src={preview} controls="true"></audio>
+            <audio src={preview} controls={true}></audio>
           </div>
           <div className="mt-4 flex justify-start gap-2 p-2 pt-0">
             <button
