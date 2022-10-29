@@ -1,8 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
-import useForm from "../../hooks/useForm";
+import {useForm, useSong} from "../../hooks";
 import { SongList } from "../components";
-import { useSong } from "../../hooks/useSong";
 
 export const SearchPage = () => {
   const navigate = useNavigate();

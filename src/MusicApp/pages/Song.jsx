@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
+import { useFetch } from "../../hooks";
 
 export const Song = () => {
   const { id } = useParams();
@@ -45,14 +45,12 @@ export const Song = () => {
               />
             </a>
             <div>
-              <h3 className="text-xl font-medium text-slate-700">
-                {album.title}
-              </h3>
+              <h3 className="text-xl font-medium text-slate-700">{title}</h3>
               <p className="text-sm text-slate-400"> By {artist.name}</p>
             </div>
           </header>
           <div className="card-info flex flex-col gap-2">
-            <p>Song: {title}</p>
+            <p>Name of the album: {album.title}</p>
             <p>Track position: {track_position}</p>
             <audio src={preview} controls={true}></audio>
           </div>
