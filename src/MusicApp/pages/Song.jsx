@@ -50,7 +50,7 @@ export const Song = () => {
             </div>
           </header>
           <div className="card-info flex flex-col gap-2">
-            <p>Name of the album: {album.title}</p>
+            <p>Album name: {album.title}</p>
             <p>Track position: {track_position}</p>
             <audio src={preview} controls={true}></audio>
           </div>
