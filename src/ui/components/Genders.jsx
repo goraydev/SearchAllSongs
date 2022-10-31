@@ -7,9 +7,9 @@ export const Genders = () => {
       {genres.map((g) => (
         <NavLink
           key={g.id}
-          to={`category/${g.name}`}
+          to={`category?q=${g.name}`}
           className={({ isActive }) =>
-            `flex justify-center items-center w-full ${
+            ` flex justify-center items-center w-full ${
               isActive ? "text-amber-500" : "text-white hover:bg-amber-500"
             }`
           }

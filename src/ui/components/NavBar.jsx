@@ -29,7 +29,7 @@ export const NavBar = () => {
                 <p>Genres</p>
                 <i className="fa-solid fa-caret-up arrow-up"></i>
               </Link>
-              <ul>
+              <ul className="z-10">
                 <Genders />
               </ul>
             </li>
