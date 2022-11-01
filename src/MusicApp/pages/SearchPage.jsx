@@ -1,9 +1,11 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
-import {useForm, useSong} from "../../hooks";
+import { useForm, useMicro, useSong } from "../../hooks";
 import { SongList } from "../components";
+import { useState } from "react";
 
 export const SearchPage = () => {
+  const [micro, setMicro] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -25,6 +27,26 @@ export const SearchPage = () => {
     navigate(`?q=${search}`);
   };
 
+  const { recognition } = useMicro();
+  const handleMic = () => {
+    recognition.start();
+
+    recognition.onstart = () => {
+      setMicro(true);
+    };
+
+    recognition.onspeechend = () => {
+      recognition.stop();
+      setMicro(false);
+    };
+
+    recognition.onresult = (e) => {
+      const { transcript } = e.results[0][0];
+
+      navigate(`?q=${transcript}`);
+    };
+  };
+
   return (
     <main className="mt-5 h-60">
       <h1 className="text-center text-2xl">Search All Songs</h1>
@@ -42,8 +64,12 @@ export const SearchPage = () => {
           value={search}
           onChange={onInputChange}
         />
-        <button>
-          <img src="./micro-off.png" alt="micro" className="micro" />
+        <button onClick={handleMic}>
+          {micro ? (
+            <img src="./micro-on.png" alt="micro" className="micro" />
+          ) : (
+            <img src="./micro-off.png" alt="micro" className="micro" />
+          )}
         </button>
       </form>
       <hr />
