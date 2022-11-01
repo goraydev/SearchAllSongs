@@ -1,7 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { genres } from "../data/genres";
 
 export const Genders = () => {
+  const location = useLocation();
+
   return (
     <>
       {genres.map((g) => (
@@ -10,7 +12,7 @@ export const Genders = () => {
           to={`category?q=${g.name}`}
           className={({ isActive }) =>
             ` flex justify-center items-center w-full ${
-              isActive ? "text-amber-500" : "text-white hover:bg-amber-500"
+              location.pathname ==="/search" && isActive ? "text-amber-500" : "text-white hover:bg-amber-500"
             }`
           }
           end
