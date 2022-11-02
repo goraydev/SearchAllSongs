@@ -71,3 +71,13 @@ img {
   background-color: rgba(245, 161, 23, 0.4);
   backdrop-filter: blur(1rem);
 }
+
+input[type="text"] {
+  width: 12rem;
+}
+
+@media (min-width: 768px) {
+  input[type="text"] {
+    width: 100%;
+  }
+}

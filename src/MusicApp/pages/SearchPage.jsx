@@ -60,7 +60,7 @@ export const SearchPage = () => {
             type="text"
             name="search"
             id="search"
-            className="border-2 border-amber-500 rounded-md p-2 focus:outline-none w-full"
+            className="border-2 border-amber-500 rounded-md p-2 focus:outline-none"
             placeholder="Search song"
             value={search}
             onChange={onInputChange}
