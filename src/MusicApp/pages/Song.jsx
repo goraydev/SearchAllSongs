@@ -19,7 +19,7 @@ export const Song = () => {
   return (
     <>
       {/*<!-- Component: Horizontal card--> */}
-      <div className="mt-10 animate__animated animate__fadeInDownBig flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
+      <div className="my-16 animate__animated animate__fadeInDownBig flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
         {/*  <!-- Image --> */}
         <figure className="flex-1">
           <img

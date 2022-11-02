@@ -50,20 +50,25 @@ export const SearchPage = () => {
   return (
     <main className="mt-5 h-60">
       <h1 className="text-center text-2xl">Search All Songs</h1>
-      <form
-        action=""
-        className="my-4 flex justify-center items-center gap-2"
-        onSubmit={handleSubmit}
-      >
-        <input
-          type="text"
-          name="search"
-          id="search"
-          className="border-2 border-amber-500 rounded-md p-2 focus:outline-none w-full md:w-1/3"
-          placeholder="Search song"
-          value={search}
-          onChange={onInputChange}
-        />
+      <div className="flex justify-center items-center gap-4">
+        <form
+          action=""
+          className="my-4 flex gap-1 basis-1/2"
+          onSubmit={handleSubmit}
+        >
+          <input
+            type="text"
+            name="search"
+            id="search"
+            className="border-2 border-amber-500 rounded-md p-2 focus:outline-none w-full"
+            placeholder="Search song"
+            value={search}
+            onChange={onInputChange}
+          />
+          <button type="submit" className="bg-amber-500 p-2 rounded-md">
+            Search
+          </button>
+        </form>
         <button onClick={handleMic}>
           {micro ? (
             <img src="./micro-on.png" alt="micro" className="micro" />
@@ -71,7 +76,7 @@ export const SearchPage = () => {
             <img src="./micro-off.png" alt="micro" className="micro" />
           )}
         </button>
-      </form>
+      </div>
       <hr />
       {getSongs?.songs && <SongList list={getSongs.songs} />}
     </main>
