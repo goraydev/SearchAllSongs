@@ -81,3 +81,20 @@ input[type="text"] {
     width: 100%;
   }
 }
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+}
+.page_404 img {
+  width: 100%;
+}
+.four_zero_four_bg {
+  background-image: url(404.gif);
+  height: 400px;
+  background-position: center;
+}
+
+
+.contant_box_404 {
+  margin-top: -50px;
+}
