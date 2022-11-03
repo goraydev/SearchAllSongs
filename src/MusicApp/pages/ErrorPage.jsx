@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const ErrorPage = () => {
   return (
     <section className="page_404">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="">
           <div className="">
             <div className="text-center">
@@ -17,7 +17,10 @@ export const ErrorPage = () => {
 
                 <p>the page you are looking for not avaible!</p>
               </div>
-              <Link to="/search" className="bg-amber-500 text-white p-2 rounded-md">
+              <Link
+                to="/search"
+                className="bg-amber-500 text-white p-2 rounded-md"
+              >
                 Go to home
               </Link>
             </div>
