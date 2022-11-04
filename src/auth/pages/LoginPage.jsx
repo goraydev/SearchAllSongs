@@ -13,18 +13,23 @@ export const LoginPage = () => {
   };
   return (
     <div className="login">
-      <section className="h-screen container mx-auto flex flex-col items-center justify-center gap-4">
-        <h1 className="text-center text-4xl">Login</h1>
+      <section className="h-screen w-11/12 container mx-auto flex flex-col items-center justify-center gap-4">
+        <h1 className="text-center text-4xl">Search ALL Songs</h1>
 
         <form
           action=""
-          className="flex flex-col gap-4 p-2 backdrop-blur-md rounded-md"
+          className="flex flex-col gap-4 p-4 backdrop-blur-md rounded-md"
         >
           <div className="field">
             <label htmlFor="name" className="text-2xl p-1">
               Write your name
             </label>
-            <input type="text" name="name" id="name" className="mt-2 outline-none p-1" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="mt-2 outline-none p-1"
+            />
           </div>
           <button
             type="submit"

@@ -104,3 +104,11 @@ input[type="text"] {
   background-size: cover;
   height: 100vh;
 }
+
+.login form {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.login input {
+  width: 100%;
+}
