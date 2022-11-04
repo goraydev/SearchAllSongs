@@ -1,15 +1,31 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import useForm from "../../hooks/useForm";
 import { AuthContext } from "../context/AuthContext";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
-  const handleClick = () => {
-    login("Ramos");
+
+  const {
+    formState: { name },
+    onInputChange,
+    onResetForm,
+  } = useForm({
+    name: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name.length) return;
+
+    login(name);
     navigate("/search", {
       replace: true,
     });
+
+    onResetForm();
   };
   return (
     <div className="login">
@@ -19,6 +35,7 @@ export const LoginPage = () => {
         <form
           action=""
           className="flex flex-col gap-4 p-4 backdrop-blur-md rounded-md"
+          onSubmit={handleSubmit}
         >
           <div className="field">
             <label htmlFor="name" className="text-2xl p-1">
@@ -29,12 +46,13 @@ export const LoginPage = () => {
               name="name"
               id="name"
               className="mt-2 outline-none p-1"
+              value={name}
+              onChange={onInputChange}
             />
           </div>
           <button
             type="submit"
             className="bg-amber-500 rounded-md p-2 self-center"
-            onClick={handleClick}
           >
             login
           </button>
