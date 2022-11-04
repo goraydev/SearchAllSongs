@@ -98,3 +98,9 @@ input[type="text"] {
 .contant_box_404 {
   margin-top: -50px;
 }
+
+.login {
+  background-image: url("loginbackground.jpg");
+  background-size: cover;
+  height: 100vh;
+}
