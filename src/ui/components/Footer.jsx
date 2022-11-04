@@ -6,8 +6,8 @@ export const Footer = () => {
   return (
     <footer className="footer fixed bottom-0 w-full py-2">
       <p className="text-center">
-        All rights reserver &copy;{currentYear()}. Developed by Aguedo Yanac
-        Gerson | Goraycode
+        Rights reserverd &copy;{currentYear()}. Developed by Aguedo Yanac Gerson
+        | Goraycode
       </p>
     </footer>
   );
