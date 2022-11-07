@@ -8,6 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+tests
+babel.config.cjs
+jest.config.cjs
+jest.setup.js
 dist
 dist-ssr
 *.local
