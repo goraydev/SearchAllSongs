@@ -30,7 +30,7 @@ export const LoginPage = () => {
   return (
     <div className="login">
       <section className="h-screen w-11/12 container mx-auto flex flex-col items-center justify-center gap-4">
-        <h1 className="text-center text-4xl">Search ALL Songs</h1>
+        <h1 className="text-center text-4xl">Search All Songs</h1>
 
         <form
           action=""
