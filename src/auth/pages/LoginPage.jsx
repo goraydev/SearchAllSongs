@@ -33,6 +33,7 @@ export const LoginPage = () => {
         <h1 className="text-center text-4xl">Search All Songs</h1>
 
         <form
+          aria-label="form"
           action=""
           className="flex flex-col gap-4 p-4 backdrop-blur-md rounded-md"
           onSubmit={handleSubmit}
