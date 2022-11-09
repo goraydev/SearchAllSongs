@@ -6,8 +6,8 @@ import { Genders } from "./Genders";
 export const NavBar = () => {
   const navigate = useNavigate();
 
-  const { logout } = useContext(AuthContext);
-
+  const { user, logout } = useContext(AuthContext);
+  console.log(user);
   const onLogout = () => {
     navigate("/login", {
       replace: true,
@@ -42,7 +42,7 @@ export const NavBar = () => {
         </nav>
       </div>
       <div className="second flex justify-center items-center gap-4">
-        <p>Hola {JSON.parse(localStorage.getItem("data"))?.name}</p>
+        <p>Hola {user?.name}</p>
         <button
           className="bg-gray-800 px-2 py-1 rounded-md text-white hover:bg-gray-900"
           onClick={onLogout}
