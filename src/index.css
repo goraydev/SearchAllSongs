@@ -89,7 +89,7 @@ input[type="text"] {
   width: 100%;
 }
 .four_zero_four_bg {
-  background-image: url(404.gif);
+  background-image: url("./404.gif");
   background-repeat: no-repeat;
   height: 400px;
   background-position: center;
@@ -100,7 +100,7 @@ input[type="text"] {
 }
 
 .login {
-  background-image: url("loginbackground.jpg");
+  background-image: url("./loginbackground.jpg");
   background-size: cover;
   height: 100vh;
 }
