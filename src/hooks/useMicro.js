@@ -1,7 +1,7 @@
 export const useMicro = () => {
 
 
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
 
     return {
