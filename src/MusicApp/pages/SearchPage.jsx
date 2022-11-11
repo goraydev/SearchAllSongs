@@ -52,6 +52,7 @@ export const SearchPage = () => {
       <h1 className="text-center text-2xl">Search All Songs</h1>
       <div className="flex justify-center items-center gap-4">
         <form
+          aria-label="form"
           action=""
           className="my-4 flex gap-1 basis-1/2"
           onSubmit={handleSubmit}
@@ -71,9 +72,9 @@ export const SearchPage = () => {
         </form>
         <button onClick={handleMic}>
           {micro ? (
-            <img src="./micro-on.png" alt="micro" className="micro" />
+            <img src="./micro-on.png" alt="micro on" className="micro" />
           ) : (
-            <img src="./micro-off.png" alt="micro" className="micro" />
+            <img src="./micro-off.png" alt="micro off" className="micro" />
           )}
         </button>
       </div>
