@@ -3,21 +3,17 @@
 
 Project where you can search for all kinds of songs: artists, albums, genres and more.
 The project has a voice recognition.
-
+- **Version:** 1.0.0
 
 
 ## Features
 
-- Light mode toggle
+- Light mode
 - Live previews
 - Fullscreen mode
 - Cross platform
 - Responsive design
 
-
-## Feedback
-
-If you have any feedback, please reach out to us at jofre1236@gmail.com
 
 
 ## Installation
@@ -48,3 +44,8 @@ Install my-project with npm
 [![search4.jpg](https://i.postimg.cc/Dzn3rqwb/search4.jpg)](https://postimg.cc/MnPLxfRW)
 [![search5.jpg](https://i.postimg.cc/T386w880/search5.jpg)](https://postimg.cc/F7xqWBHk)
 [![search6.jpg](https://i.postimg.cc/7YJ4wHRb/search6.jpg)](https://postimg.cc/JG8vQLMW)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at jofre1236@gmail.com
