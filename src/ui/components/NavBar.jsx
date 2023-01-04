@@ -39,6 +39,16 @@ export const NavBar = () => {
             </li>
           </ul>
         </nav>
+
+        <NavLink
+          to={"/favoritesongs"}
+          className={({ isActive }) =>
+            `${isActive ? "text-white" : "text-black"}`
+          }
+          end
+        >
+          My favorites Song
+        </NavLink>
       </div>
       <div className="second flex justify-center items-center gap-4">
         <p aria-label="user">Hello {user?.name}</p>
