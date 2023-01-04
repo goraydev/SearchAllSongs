@@ -4,7 +4,7 @@ import { SongList } from "../components/SongList";
 
 export const MyFavoritesSong = () => {
   const listFavorites = JSON.parse(localStorage.getItem("myFavoritesSong"));
-  const newList = listFavorites.map((id) => Number(id));
+  const newList = listFavorites?.map((id) => Number(id));
   const [favorites, setFavorites] = useState([]);
 
   const getFavorites = async () => {
