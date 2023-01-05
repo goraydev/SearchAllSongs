@@ -18,6 +18,7 @@ export const MyFavoritesSong = () => {
 
   return (
     <>
+     
       <SongList list={favorites} />
     </>
   );
