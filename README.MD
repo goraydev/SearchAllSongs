@@ -3,7 +3,7 @@
 
 Project where you can search for all kinds of songs: artists, albums, genres and more.
 The project has a voice recognition.
-- **Version:** 1.0.0
+- **Version:** 2.0.0
 
 
 ## Features
