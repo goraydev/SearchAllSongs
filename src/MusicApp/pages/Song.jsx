@@ -27,8 +27,21 @@ export const Song = () => {
   );
 
   const saveMyFavorite = () => {
-    idFavoriteSongs = [id, ...idFavoriteSongs];
+    const existSong = idFavoriteSongs.some((idFavorite) => idFavorite === id);
 
+    if (existSong) {
+      const favorites = idFavoriteSongs.map((idFavorite) => {
+        if (idFavorite === id) {
+          return idFavorite;
+        } else {
+          return idFavorite;
+        }
+      });
+
+      idFavoriteSongs = [...favorites];
+    } else {
+      idFavoriteSongs = [id, ...idFavoriteSongs];
+    }
     sincronitationStorage();
   };
 
