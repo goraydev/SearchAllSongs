@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks";
+import toast, { Toaster } from "react-hot-toast";
 let idFavoriteSongs = [];
 
 export const Song = () => {
@@ -27,6 +28,7 @@ export const Song = () => {
   );
 
   const saveMyFavorite = () => {
+    toast("Added to your favorite songs");
     const existSong = idFavoriteSongs.some((idFavorite) => idFavorite === id);
 
     if (existSong) {
@@ -46,6 +48,7 @@ export const Song = () => {
   };
 
   const quitMyfavorite = () => {
+    toast("Removed from your favorite songs");
     idFavoriteSongs = idFavoriteSongs.filter(
       (idFavorites) => idFavorites !== id
     );
@@ -54,6 +57,7 @@ export const Song = () => {
 
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       {/*<!-- Component: Horizontal card--> */}
       <div className="my-16 animate__animated animate__fadeInDownBig flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
         {/*  <!-- Image --> */}

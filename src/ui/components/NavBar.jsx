@@ -47,7 +47,7 @@ export const NavBar = () => {
           }
           end
         >
-          My favorites Song
+          My favorite Songs
         </NavLink>
       </div>
       <div className="second flex justify-center items-center gap-4">
