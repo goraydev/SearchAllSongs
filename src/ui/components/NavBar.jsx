@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/context/AuthContext";
 import { Genders } from "./Genders";
+import { Theme } from "./Theme";
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -49,6 +50,9 @@ export const NavBar = () => {
         >
           My favorite Songs
         </NavLink>
+        <div>
+          <Theme />
+        </div>
       </div>
       <div className="second flex justify-center items-center gap-4">
         <p aria-label="user">Hello {user?.name}</p>

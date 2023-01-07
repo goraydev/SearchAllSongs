@@ -49,7 +49,7 @@ export const SearchPage = () => {
 
   return (
     <main className="mt-5 h-60">
-      <h1 className="text-center text-3xl">Search All Songs</h1>
+      <h1 className="text-center text-3xl dark:text-white">Search All Songs</h1>
       <div className="flex justify-center items-center gap-4">
         <form
           aria-label="form"

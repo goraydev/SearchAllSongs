@@ -18,7 +18,7 @@ export const MyFavoritesSong = () => {
 
   return (
     <>
-      <h1 className="mt-5 text-center text-3xl">My favorite Songs</h1>
+      <h1 className="mt-5 text-center text-3xl text-black dark:text-white">My favorite Songs</h1>
 
       {!listFavorites && (
         <p className="mt-20 text-center text-xl">

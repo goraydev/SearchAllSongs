@@ -3,12 +3,12 @@
 
 Project where you can search for all kinds of songs: artists, albums, genres and more.
 The project has a voice recognition.
-- **Version:** 2.0.0
+- **Version:** 2.1.0
 
 
 ## Features
 
-- Light mode
+- Dark/Light mode toggle
 - Live previews
 - Fullscreen mode
 - Cross platform

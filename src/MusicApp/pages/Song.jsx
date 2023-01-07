@@ -59,7 +59,7 @@ export const Song = () => {
     <>
       <Toaster position="top-center" reverseOrder={false} />
       {/*<!-- Component: Horizontal card--> */}
-      <div className="my-16 animate__animated animate__fadeInDownBig flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
+      <div className="my-16 animate__animated animate__fadeInDownBig flex flex-col overflow-hidden bg-white dark:bg-slate-700 rounded shadow-md text-slate-500 shadow-slate-300 dark:shadow-slate-900 sm:flex-row">
         {/*  <!-- Image --> */}
         <figure className="flex-1">
           <img
@@ -85,16 +85,16 @@ export const Song = () => {
               />
             </a>
             <div>
-              <h3 className="text-xl font-medium text-slate-700">{title}</h3>
+              <h3 className="text-xl font-medium text-slate-700 dark:text-white">{title}</h3>
               <p className="text-sm text-slate-400"> By {artist.name}</p>
             </div>
           </header>
-          <div className="card-info flex flex-col gap-2">
+          <div className="card-info flex flex-col gap-2 dark:text-slate-400">
             <p>Album name: {album.title}</p>
             <p>Track position: {track_position}</p>
             <audio src={preview} controls={true}></audio>
           </div>
-          <div className="flex justify-start cent items-center gap-2 py-2">
+          <div className="flex justify-start cent items-center gap-2 py-2 dark:text-slate-400">
             {!otherComponent && (
               <>
                 <label htmlFor="">Add to favorite</label>
@@ -163,7 +163,7 @@ export const Song = () => {
           </div>
           <div className="mt-4 flex justify-start gap-2 p-2 pt-0">
             <button
-              className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide transition duration-300 rounded justify-self-center whitespace-nowrap text-white-500 bg-amber-500 hover:text-white focus:bg-amber-200 focus:text-amber-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-amber-300 disabled:shadow-none disabled:hover:bg-transparent"
+              className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide transition duration-300 rounded justify-self-center whitespace-nowrap text-white-500 bg-amber-500 hover:text-white focus:bg-amber-200 focus:text-amber-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-amber-300 disabled:shadow-none disabled:hover:bg-transparent dark:text-white"
               onClick={handleClick}
             >
               <svg

@@ -26,6 +26,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     localStorage.setItem("data", JSON.stringify(user));
+    localStorage.setItem("theme", "light");
 
     dispatch(action);
   };

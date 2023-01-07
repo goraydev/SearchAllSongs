@@ -16,7 +16,7 @@ export const SongCard = ({
   return (
     <>
       {/*<!-- Component: Blog card with action button --> */}
-      <div className="card overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+      <div className="card overflow-hidden bg-white dark:bg-slate-700 rounded shadow-md text-slate-500 dark:text-slate-400 shadow-slate-300 dark:shadow-slate-900">
         {/*  <!-- Image --> */}
         <figure>
           <img
@@ -42,7 +42,7 @@ export const SongCard = ({
               />
             </a>
             <div>
-              <h3 className="text-xl font-medium text-slate-700">
+              <h3 className="text-xl font-medium text-slate-700 dark:text-white">
                 {title_short.slice(0, 20)}
               </h3>
               <p className="text-sm text-slate-400"> By {artist.name}</p>
@@ -54,7 +54,7 @@ export const SongCard = ({
         {/*  <!-- Action base sized link button --> */}
         <div className="flex justify-end gap-2 p-2 pt-0">
           <button
-            className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide transition duration-300 rounded justify-self-center whitespace-nowrap text-gray-500 hover:bg-amber-500 hover:text-white focus:bg-amber-200 focus:text-amber-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-amber-300 disabled:shadow-none disabled:hover:bg-transparent"
+            className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide transition duration-300 rounded justify-self-center whitespace-nowrap text-gray-500 hover:bg-amber-500 hover:text-white focus:bg-amber-200 focus:text-amber-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-amber-300 disabled:shadow-none disabled:hover:bg-transparent dark:text-slate-400 dark:hover:text-white"
             onClick={handleClick}
           >
             <span>Read more</span>
