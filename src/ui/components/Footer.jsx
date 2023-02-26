@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="footer fixed bottom-0 w-full py-2">
       <p className="text-center">
         Rights reserverd &copy;{currentYear()}. Developed by Aguedo Yanac Gerson
-        | Goraycode
+        | Goraydev
       </p>
     </footer>
   );
